@@ -1,12 +1,12 @@
 import React from "react";
-import ClosePopupOnKeydown from "./ClosePopupOnKeydown";
+import ClosePopupOnKeydown from "../hooks/ClosePopupOnKeydown";
 
 function ImagePopup(props) {
-  const { link, name } = props.card;
+  const { link, name } = props.card !== null && props.card;
 
   return (
     <div
-      className={`popup popup_name_image ${props.card && 'popup_opened'}`}
+      className={`popup popup_name_image ${props.card !== null && 'popup_opened'}`}
       onClick={(evt) => evt.target.classList.contains('popup') && props.onClose()}
     >
       <div className="popup__container-image">
@@ -16,7 +16,7 @@ function ImagePopup(props) {
         </figure>
         <button type="button" className="popup__close-button" onClick={props.onClose}></button>
       </div>
-      {props.card && <ClosePopupOnKeydown action={props.onClose}/>}
+      {props.card !== null && <ClosePopupOnKeydown action={props.onClose}/>}
     </div>
   );
 }
