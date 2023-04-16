@@ -28,15 +28,15 @@
 
 ## Инструкция по запуску проекта
 1. Склонируйте репозиторий на свой компьютер:
-```console
+```bash
 git clone https://github.com/rastereo/mesto-react.git
 ```
 2. Установите зависимости:
-```console 
+```bash 
 npm install
 ```
 3. Запустите проект:
-```console
+```bash
 npm start
 ```
 [«Веб‑разработчик»](https://practicum.yandex.ru/web/) [Яндекс.Практикум](https://practicum.yandex.ru/).
