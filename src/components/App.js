@@ -48,6 +48,12 @@ function App() {
       .catch(err => console.log(err));
   }
 
+  function handleCardDelete(card) {
+    api.deleteCard(card._id)
+      .then(() => setCards((state) => state.filter((c) => c._id !== card._id)))
+      .catch(err => console.log(err));
+  }
+
   useEffect(() => {
     Promise.all([
       api.getUserInfo(),
@@ -71,6 +77,7 @@ function App() {
           onEditAvatar={handleEditAvatarClick}
           onCardClick={handleCardClick}
           onCardLike={handleCardLike}
+          onCardDelete={handleCardDelete}
         />
         <Footer />
         <PopupWithForm
