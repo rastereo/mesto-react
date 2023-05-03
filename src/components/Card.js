@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import CurrentUserContext from "../contexts/CurrentUserContext";
+import { useContext } from 'react';
+import CurrentUserContext from '../contexts/CurrentUserContext';
 
 function Card(props) {
   const { link, name, likes, owner } = props.card;
 
   const currentUser = useContext(CurrentUserContext);
-
   const isOwner = owner._id === currentUser._id;
   const isLiked = likes.some(like => like._id === currentUser._id);
 

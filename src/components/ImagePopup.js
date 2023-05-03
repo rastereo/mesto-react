@@ -1,5 +1,5 @@
-import React from "react";
-import ClosePopupOnKeydown from "../hooks/ClosePopupOnKeydown";
+import React from 'react';
+import ClosePopupOnKeydown from '../hooks/ClosePopupOnKeydown';
 
 function ImagePopup(props) {
   const { link, name } = props.card !== null && props.card;
@@ -11,10 +11,20 @@ function ImagePopup(props) {
     >
       <div className="popup__container-image">
         <figure className="popup__figure">
-          <img src={link} alt={name} className="popup__photo" />
-          <figcaption className="popup__caption">{name}</figcaption>
+          <img
+            src={link}
+            alt={name}
+            className="popup__photo"
+          />
+          <figcaption className="popup__caption">
+            {name}
+          </figcaption>
         </figure>
-        <button type="button" className="popup__close-button" onClick={props.onClose}></button>
+        <button
+          type="button"
+          className="popup__close-button"
+          onClick={props.onClose}
+        ></button>
       </div>
       {props.card !== null && <ClosePopupOnKeydown action={props.onClose}/>}
     </div>
