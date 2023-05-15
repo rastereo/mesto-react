@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 
 import PopupWithForm from './PopupWithForm';
 
-import { useFormAndValidation } from '../hooks/useFormAndValidation';
+import { UseFormAndValidation } from '../hooks/UseFormAndValidation';
 
 function AddPlacePopup(props) {
   const [description, setDescription] = useState('');
   const [link, setLink] = useState('');
 
-  const {handleChangeValidation, errors, isValid, resetForm} = useFormAndValidation()
+  const {handleChangeValidation, errors, isValid, resetForm} = UseFormAndValidation()
 
   function handleChangeDescription(evt) {
     setDescription(evt.target.value);

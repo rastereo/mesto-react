@@ -3,7 +3,7 @@ import { useState, useContext, useEffect } from 'react'
 import PopupWithForm from './PopupWithForm'
 import CurrentUserContext from '../contexts/CurrentUserContext';
 
-import { useFormAndValidation } from '../hooks/useFormAndValidation';
+import { UseFormAndValidation } from '../hooks/UseFormAndValidation';
 
 function EditProfilePopup(props) {
   const [name, setName] = useState('');
@@ -11,7 +11,7 @@ function EditProfilePopup(props) {
 
   const currentUser = useContext(CurrentUserContext);
 
-  const {handleChangeValidation, errors, isValid, resetForm, setIsValid} = useFormAndValidation();
+  const {handleChangeValidation, errors, isValid, resetForm, setIsValid} = UseFormAndValidation();
 
   function handleChangeName(evt) {
     setName(evt.target.value);

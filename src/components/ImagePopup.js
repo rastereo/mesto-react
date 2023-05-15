@@ -1,5 +1,5 @@
 import React from 'react';
-import ClosePopupOnKeydown from '../hooks/ClosePopupOnKeydown';
+import UseClosePopupOnKeydown from '../hooks/UseClosePopupOnKeydown';
 
 function ImagePopup(props) {
   const { link, name } = props.card !== null && props.card;
@@ -26,7 +26,7 @@ function ImagePopup(props) {
           onClick={props.onClose}
         ></button>
       </div>
-      {props.card !== null && <ClosePopupOnKeydown action={props.onClose}/>}
+      {props.card !== null && <UseClosePopupOnKeydown action={props.onClose}/>}
     </div>
   );
 }

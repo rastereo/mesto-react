@@ -1,5 +1,5 @@
 import React from 'react';
-import ClosePopupOnKeydown from '../hooks/ClosePopupOnKeydown';
+import UseClosePopupOnKeydown from '../hooks/UseClosePopupOnKeydown';
 
 function PopupWithForm(props) {
   return (
@@ -32,7 +32,7 @@ function PopupWithForm(props) {
           onClick={props.onClose}
         ></button>
       </div>
-      {props.isOpen && <ClosePopupOnKeydown action={props.onClose} />}
+      {props.isOpen && <UseClosePopupOnKeydown action={props.onClose} />}
     </div>
   );
 }

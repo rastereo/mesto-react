@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-function ClosePopupOnKeydown(props) {
+function UseClosePopupOnKeydown(props) {
   useEffect(() => {
     function handleEscClose(evt) {
       evt.key === 'Escape' && props.action();
@@ -14,4 +14,4 @@ function ClosePopupOnKeydown(props) {
   });
 }
 
-export default ClosePopupOnKeydown;
+export default UseClosePopupOnKeydown;
